@@ -1,0 +1,37 @@
+<div style="width:300px; float:left; border: 2px solid black; margin: 3px">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>Title:</b>
+    <%= best_in_place @project, :title %>
+
+  </p>
+
+  <p>
+    <b>Desc:</b>
+    <%= @project.desc %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
+</div>
+<div id="todo_lists" style="width:300px; float:left; border: 2px solid black; margin: 3px">
+
+ <%= render @project.todo_lists %>
+
+</div>
+
+<div style="width:300px; float:left; border: 2px solid black; margin: 3px">
+
+  <%= form_for [@project, @new_list], :remote => true do |f| %>
+      <div class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+      </div>
+      <%= f.submit %>
+
+  <% end %>
+
+</div>

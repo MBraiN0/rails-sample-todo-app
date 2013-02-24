@@ -1,0 +1,23 @@
+<div style="border: 1px dotted #2aa7ff" id="<%=dom_id(todo_list)%>">
+  <div>
+    <%= best_in_place todo_list, :title, :path => project_todo_list_path(todo_list.project, todo_list) %>
+    <%= link_to 'x', project_todo_list_path(todo_list.project, todo_list), method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <a href="#" class="show_todo_items" style="margin-left:160px">Show/Hide Todo Items</a>
+  <div style="border: 1px solid deeppink; margin: 10px;display: none" class="todo_items">
+    <a href="#" class="open_new_todo_item_form">New Todo Item</a>
+    <div style="display: none" class="new_todo_item_form">
+      <%= form_for [@project, todo_list, @new_item], :remote => true do |f| %>
+          <div class="field">
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </div>
+          <%= f.submit %>
+
+      <% end %>
+    </div>
+    <ul>
+        <%= render(todo_list.todo_items) %>
+    </ul>
+  </div>
+</div>

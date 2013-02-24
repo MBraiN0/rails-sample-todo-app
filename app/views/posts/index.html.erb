@@ -1,0 +1,39 @@
+<h1>Listing posts</h1>
+
+<%= render 'form' %>
+
+
+<%= form_tag posts_path, :method => :get, :remote => true  do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+
+
+<div id="posts">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>
+<br />
+
+<%= link_to 'New Post', new_post_path %>

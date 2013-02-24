@@ -1,0 +1,6 @@
+var x = 1;
+var new_item = "<%= escape_javascript(render(@todo_item)) %>";
+var list_id = "<%=dom_id(@todo_item.todo_list)%>"
+
+$("#"+list_id + " > div.todo_items > ul").append(new_item);
+$("#"+list_id + " > div.todo_items > ul > li:last").effect('highlight')

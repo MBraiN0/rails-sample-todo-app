@@ -1,0 +1,4 @@
+<li id="<%=dom_id(todo_item)%>">
+    <%= best_in_place todo_item, :title, :path => project_todo_list_todo_item_path(todo_item.todo_list.project,todo_item.todo_list,todo_item) %>
+    <%= link_to 'x', project_todo_list_todo_item_path(todo_item.todo_list.project,todo_item.todo_list,todo_item), method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %>
+</li>

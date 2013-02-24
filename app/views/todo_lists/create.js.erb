@@ -1,0 +1,5 @@
+var new_list = "<%= escape_javascript(render(@todo_list)) %>";
+$(new_list).hide();
+
+$("#todo_lists").append(new_list).show('slow');
+$("#todo_lists > div:last").effect('highlight')
