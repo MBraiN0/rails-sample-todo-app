@@ -31,7 +31,7 @@
     <file path="/projects.js" changelist="373d28bb-9f1a-4a40-b39e-ca7635605cd6" time="1361743988598" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="373d28bb-9f1a-4a40-b39e-ca7635605cd6" time="1361743847637" ignored="false" />
     <file path="$PROJECT_DIR$/db/schema.rb" changelist="373d28bb-9f1a-4a40-b39e-ca7635605cd6" time="1361744436614" ignored="false" />
-    <file path="/.gitignore" changelist="373d28bb-9f1a-4a40-b39e-ca7635605cd6" time="1361744992276" ignored="false" />
+    <file path="/.gitignore" changelist="373d28bb-9f1a-4a40-b39e-ca7635605cd6" time="1361745145755" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="6" selection-start="436" selection-end="436" vertical-scroll-proportion="0.625">
+            <state line="10" column="8" selection-start="370" selection-end="370" vertical-scroll-proportion="0.41666666">
               <folding />
             </state>
           </provider>
@@ -721,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="6" selection-start="436" selection-end="436" vertical-scroll-proportion="0.625">
+        <state line="10" column="8" selection-start="370" selection-end="370" vertical-scroll-proportion="0.41666666">
           <folding />
         </state>
       </provider>
